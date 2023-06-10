@@ -9,7 +9,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.util.ArrayList"%>
 <%@ page import="java.util.Date"%>
-<%@ page import="Beans.Cancion" %>
 <%@ page import="Beans.JugadorBean" %>
 <%
     ArrayList<JugadorBean> listaJugadores = (ArrayList<JugadorBean>) request.getAttribute("listaJugadores");
@@ -29,7 +28,7 @@
         <div class="col-lg-6">
             <h1 class='text-light'>Lista Total de Jugadores</h1>
         </div>
-        <a class="btn btn-warning" href="<%=request.getContextPath()%>/JugadorServlet?action=lj">Mostrar todos los jugadores</a>
+        <a class="btn btn-warning" href="<%=request.getContextPath()%>/JugadorServlet?action=lj">Agregar Jugadores</a>
     </div>
     <div class="tabla">
         <table class="table table-dark table-transparent table-hover">
