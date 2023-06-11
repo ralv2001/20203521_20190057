@@ -28,7 +28,7 @@
     <div class="col-lg-6">
       <h1 class='text-light'>Lista Total de Jugadores</h1>
     </div>
-    <a class="btn btn-warning" href="<%=request.getContextPath()%>/SeleccionServlet?action=ls">Agregar Partidos</a>
+    <a class="btn btn-warning" href="<%=request.getContextPath()%>/SeleccionServlet?action=ls">Agregar Nueva Seleccion</a>
   </div>
   <div class="tabla">
     <table class="table table-dark table-transparent table-hover">
@@ -38,8 +38,7 @@
         <th>NOMBRE</th>
         <th>TÉCNICO</th>
         <th>ESTADIO</th>
-        <th>ID SELECCION LOCAL</th>
-        <th>ID SELECCION VISITANTE</th>
+        <th>PRIMER PARTIDO</th>
         <th>FECHA PARTIDO</th>
         <th></th>
       </tr>
@@ -52,8 +51,7 @@
         <td><%=seleccion.getNombre()%></td>
         <td><%=seleccion.getTecnico()%></td>
         <td><%=seleccion.getNombreEstadio()%></td>
-        <td><%=seleccion.getIdSeleccionLocal()%></td>
-        <td><%=seleccion.getIdSeleccionVisitante()%></td>
+        <td><%=seleccion.getPrimerPartido()%></td>
         <td><%=seleccion.getFecha()%></td>
       </tr>
       <%  }  %>

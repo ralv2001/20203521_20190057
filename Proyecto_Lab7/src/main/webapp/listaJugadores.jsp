@@ -28,7 +28,7 @@
         <div class="col-lg-6">
             <h1 class='text-light'>Lista Total de Jugadores</h1>
         </div>
-        <a class="btn btn-warning" href="<%=request.getContextPath()%>/JugadorServlet?action=lj">Agregar Jugadores</a>
+        <a class="btn btn-warning" href="<%=request.getContextPath()%>/JugadorServlet?action=aj">Agregar Nuevo Jugador</a>
     </div>
     <div class="tabla">
         <table class="table table-dark table-transparent table-hover">

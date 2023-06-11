@@ -2,10 +2,7 @@ package Daos;
 
 import Beans.JugadorBean;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 
 public class JugadorDao extends BaseDao{
@@ -43,5 +40,26 @@ public class JugadorDao extends BaseDao{
         }
 
         return listaJugadores;
+    }
+
+    public void agregarJugador(JugadorBean nuevoJugador){
+
+        String sql = "INSERT INTO jugador (nombre,edad,posicion,club,sn_idSeleccion) VALUES (?,?,?,?,?)";
+
+        try(Connection connection=this.getConnection();
+            PreparedStatement pstmt= connection.prepareStatement(sql)){
+
+            pstmt.setString(1,nuevoJugador.getNombre());
+            pstmt.setInt(2,nuevoJugador.getEdad());
+            pstmt.setString(3,nuevoJugador.getPosicion());
+            pstmt.setString(4,nuevoJugador.getClub());
+            pstmt.setInt(5,nuevoJugador.getIdSeleccion());
+
+            pstmt.executeUpdate();
+        }
+        catch (SQLException e){
+            throw new RuntimeException(e);
+        }
+
     }
 }

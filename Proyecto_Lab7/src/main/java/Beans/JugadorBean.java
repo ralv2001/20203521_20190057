@@ -7,6 +7,15 @@ public class JugadorBean {
     private String posicion;
     private String club;
     private String seleccion;
+    private int idSeleccion;
+
+    public int getIdSeleccion() {
+        return idSeleccion;
+    }
+
+    public void setIdSeleccion(int idSeleccion) {
+        this.idSeleccion = idSeleccion;
+    }
 
     public int getIdJugador() {
         return idJugador;
